@@ -1,0 +1,26 @@
+{
+  "name": "client_satisfaction_survey",
+  "version": "1.0.0",
+  "description": "A small react and node client satisfaction survey application",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "concurrently \"yarn watch\" \"cd ./client && yarn start\"",
+    "build": "cd ./client && yarn build",
+    "watch": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Samuel Thompson",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.2.0",
+    "nodemon": "^2.0.22",
+    "uuid": "^9.0.0"
+  }
+}

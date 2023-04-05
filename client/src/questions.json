@@ -1,0 +1,254 @@
+[
+    {
+        "id": 1,
+        "question": "I like the services that I received here",
+        "next": true,
+        "previous": false
+    },
+    {
+        "id": 2,
+        "question": "If I had other options, I would still elect to receive services from this agency",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 3,
+        "question": "I would recommend this agency to a friend or family member",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 4,
+        "question": "The location of the treatment facilities was convenient for me",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 5,
+        "question": "Staff were available and willing to see me as often as I felt was necessary",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 6,
+        "question": "Staff returned my phone calls within 24 hours",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 7,
+        "question": "Services were available at times that accomodated my schedule",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 8,
+        "question": "I was able to get all of the services I needed throughout treatment",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 9,
+        "question": "I was able to see a psychiatrist when I wanted to",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 10,
+        "question": "Staff here believe I can grow, change, and recover",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 11,
+        "question": "I felt comfortable asking questions about my treatment and medications",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 12,
+        "question": "I felt free to complain",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 13,
+        "question": "I was given information about my rights regarding treatment",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 14,
+        "question": "Staff encouraged me to take responsibility for how I live my life",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 15,
+        "question": "Staff informed me of possible side effects associated with beginning and completing treatment",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 16,
+        "question": "Staff respected my wishes about who was and who was not to be given information regarding my treatment",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 17,
+        "question": "I, not staff, decided my treatment goals and treatment plan",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 18,
+        "question": "Staff were sensitive to my cultural background",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 19,
+        "question": "Staff helped me obtain the information I needed to take charge of managing my illness",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 20,
+        "question": "Staff treated me with dignity",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 21,
+        "question": "In a time of crisis my case manager or counselor was available and easy to contact",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 22,
+        "question": "Staff treated members of the LGBTIQ community with dignity and respect",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 23,
+        "question": "I can now deal more effectively with my daily problems",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 24,
+        "question": "I am better able to control my life",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 25,
+        "question": "I am better able to deal with crisis in my life",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 26,
+        "question": "I get along better with my family now",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 27,
+        "question": "I am doing better in school and or work",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 28,
+        "question": "My housing situation has improved",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 29,
+        "question": "I can now do things that are meaningful to me",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 30,
+        "question": "My addiction, trauma, or mental health symptoms are no longer bothering me",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 31,
+        "question": "I am better able to take care of my needs",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 32,
+        "question": "I am better able to handle when things go wrong now",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 33,
+        "question": "I am better able to do the things I want to do after treatment at this agency",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 34,
+        "question": "I am better able to get and keep a job after treatment at this agency",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 35,
+        "question": "I received information on addiction recovery at this agency",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 36,
+        "question": "I was offered treatment and resources regarding my issues of trauma or abuse",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 37,
+        "question": "I felt safe talking with staff about my experiences with trauma or abuse",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 38,
+        "question": "I am happy with the friendships that I have",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 39,
+        "question": "I have people with whom I can do enjoyable things",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 40,
+        "question": "I feel I belong in my community",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 41,
+        "question": "In a crisis, I have the support that I need from family and friends",
+        "next": true,
+        "previous": true
+    },
+    {
+        "id": 42,
+        "question": "I am functioning now better in social situations than before treatment",
+        "next": false,
+        "previous": true
+    }
+]
