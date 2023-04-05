@@ -30,7 +30,7 @@ jobs:
       name: 'gcloud Service List'
       run: |-
         gcloud auth login --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
-        gcloud services list --project='spars-api'
+        gcloud services list --project='client_survey'
     
     - name: 'Configures Gcloud Docker'
       run: gcloud auth configure-docker
@@ -42,7 +42,7 @@ jobs:
       run: docker build -t client_survey .
       
     - name: Tags the Docker Image for the Google Container Registry
-      run: docker tag spars-api gcr.io/client_survey/latest
+      run: docker tag client_survey gcr.io/client_survey/latest
       
     - name: Pushes the Docker Image to the Google Container Registry
       run: docker push gcr.io/client_survey/latest
