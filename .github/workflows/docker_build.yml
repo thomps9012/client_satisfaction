@@ -1,0 +1,50 @@
+name: Docker Image CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+      
+    steps:
+    
+    - uses: actions/checkout@v3
+    
+    - id: 'auth'
+      name: 'Configure Google Cloud Authentication'
+      uses: 'google-github-actions/auth@v0.3.1'
+      with:
+        create_credentials_file: 'true'
+        workload_identity_provider: 'projects/799032411408/locations/global/workloadIdentityPools/nora/providers/github-action'
+        service_account: 'thomps9012@spars-api.iam.gserviceaccount.com'
+    
+    - id: 'gcloud'
+      name: 'gcloud Service List'
+      run: |-
+        gcloud auth login --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
+        gcloud services list --project='spars-api'
+    
+    - name: 'Configures Gcloud Docker'
+      run: gcloud auth configure-docker
+    
+    - name: Lists Images in the Google Cloud
+      run: gcloud container images list-tags gcr.io/client_survey/latest
+    
+    - name: Build the Docker image
+      run: docker build -t client_survey .
+      
+    - name: Tags the Docker Image for the Google Container Registry
+      run: docker tag spars-api gcr.io/client_survey/latest
+      
+    - name: Pushes the Docker Image to the Google Container Registry
+      run: docker push gcr.io/client_survey/latest
+    
+    
