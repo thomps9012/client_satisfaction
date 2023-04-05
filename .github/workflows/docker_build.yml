@@ -24,7 +24,7 @@ jobs:
       with:
         create_credentials_file: 'true'
         workload_identity_provider: 'projects/799032411408/locations/global/workloadIdentityPools/nora/providers/github-action'
-        service_account: 'thomps9012@spars-api.iam.gserviceaccount.com'
+        service_account: '799032411408-compute@developer.gserviceaccount.com'
     
     - id: 'gcloud'
       name: 'gcloud Service List'
