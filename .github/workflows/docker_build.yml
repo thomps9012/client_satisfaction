@@ -36,15 +36,15 @@ jobs:
       run: gcloud auth configure-docker
     
     - name: Lists Images in the Google Cloud
-      run: gcloud container images list-tags gcr.io/client_survey/latest
+      run: gcloud container images list-tags gcr.io/spars-api/client_survey
     
     - name: Build the Docker image
       run: docker build -t client_survey .
       
     - name: Tags the Docker Image for the Google Container Registry
-      run: docker tag client_survey gcr.io/client_survey/latest
+      run: docker tag client_survey gcr.io/spars-api/client_survey
       
     - name: Pushes the Docker Image to the Google Container Registry
-      run: docker push gcr.io/client_survey/latest
+      run: docker push gcr.io/spars-api/client_survey
     
     
