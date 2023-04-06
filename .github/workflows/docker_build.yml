@@ -10,7 +10,7 @@ env:
   SERVICE: client-survey 
   REGION: us-central1
   WIF_PROVIDER: projects/799032411408/locations/global/workloadIdentityPools/nora/providers/github
-  WIF_SERVICE_ACCOUNT: 799032411408-compute@developer.gserviceaccount.com
+  WIF_SERVICE_ACCOUNT: nora-projects@spars-api.iam.gserviceaccount.com
 
 jobs:
   deploy:
