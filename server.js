@@ -60,7 +60,12 @@ app.post("/api/end", async (req, res) => {
     ({ client_answer }) =>
       client_answer != -1 && typeof client_answer != "string"
   );
-  const client_score = only_answered.reduce((a, b) => a + b.client_answer, 0);
+  const client_score = Math.floor(
+    (
+      only_answered.reduce((a, b) => a + b.client_answer, 0) /
+      only_answered.length * 5
+    ).toFixed(2) * 100
+  );
   const db_res = survey_collection.findOneAndUpdate(
     { _id: interview_id },
     {
