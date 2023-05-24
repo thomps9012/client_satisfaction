@@ -41,7 +41,7 @@ export default function BeginSurvey() {
     };
     try {
       const interview_res = await createRecord(client_info);
-      document.cookie = `interview_id=${interview_res};`;
+      document.cookie = `interview_id=${interview_res.data};`;
       interview_res.status === 201 && navigate("/question/1");
     } catch (err) {
       alert(err);
