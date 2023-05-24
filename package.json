@@ -22,5 +22,8 @@
     "mongodb": "^5.2.0",
     "nodemon": "^2.0.22",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "cypress": "^12.13.0"
   }
 }

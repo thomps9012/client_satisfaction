@@ -4,39 +4,49 @@ import BeginSurvey from "./Begin";
 import EndSurvey from "./End";
 
 function Layout({ children }) {
-  return <main>
-    {children}
-    <footer className="text-center">
-      © {new Date().getFullYear()} <a href="https://ts_z1.gitlab.io">ts_z</a>
-    </footer>
-  </main>
+  return (
+    <main>
+      {children}
+      <footer className="text-center">
+        © {new Date().getFullYear()} <a href="https://tszlau.com">ts_z</a>
+      </footer>
+    </main>
+  );
 }
 
 function Home() {
-  const navigate = useNavigate()
-  const beginSurvery = (e) => {
+  const navigate = useNavigate();
+  const beginSurvey = (e) => {
     e.preventDefault();
-    localStorage.clear();
-    navigate("/begin")
-  }
-  return <main className='container'>
-    <h1 className="mb-5 text-center">NORA Client Satisfaction Survey</h1>
-    <button type="link" className="btn btn-link" onClick={beginSurvery}><h3>Begin Survey</h3></button>
-  </main>
+    document.cookie =
+      "interview_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None;";
+    navigate("/begin");
+  };
+  return (
+    <main className="container">
+      <h1 className="mb-5 text-center">NORA Client Satisfaction Survey</h1>
+      <button type="link" className="btn btn-link" onClick={beginSurvey} id="begin_survey">
+        <h3>Begin Survey</h3>
+      </button>
+    </main>
+  );
 }
 
 function NotFound() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const navigateHome = (e) => {
     e.preventDefault();
-    navigate("/")
-  }
-  return <main className="container">
-    <h1>404 Page Not Found</h1>
-    <button type="btn" className="btn btn-link" onClick={navigateHome}><h3>Return to Safety</h3></button>
-  </main>
+    navigate("/");
+  };
+  return (
+    <main className="container">
+      <h1>404 Page Not Found</h1>
+      <button type="btn" className="btn btn-link" onClick={navigateHome}>
+        <h3>Return to Safety</h3>
+      </button>
+    </main>
+  );
 }
-
 
 function App() {
   return (
@@ -44,7 +54,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/begin" element={<BeginSurvey />} />
-        <Route path="/question/:current_question_id" element={<QuestionPage />} />
+        <Route
+          path="/question/:current_question_id"
+          element={<QuestionPage />}
+        />
         <Route path="/end" element={<EndSurvey />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
