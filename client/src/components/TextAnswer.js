@@ -46,7 +46,7 @@ export default function OpenAnswerOption({ question_id }) {
         <textarea
           className="form-control"
           id="open-answer"
-          style="height: 150px"
+          style={{ height: 150 }}
         ></textarea>
         <label for="open-answer">Answer Below</label>
       </div>
