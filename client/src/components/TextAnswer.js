@@ -19,7 +19,7 @@ export default function OpenAnswerOption({ question_id }) {
     e.preventDefault();
     const answer_value = document.getElementById("open-answer").value.trim();
     if (answer_value.length === 0 || answer_value === "") {
-      alert("answer is required");
+      alert("Answer is required to proceed");
       return;
     }
     try {
@@ -43,8 +43,15 @@ export default function OpenAnswerOption({ question_id }) {
     }
   };
   return (
-    <section className="d-grid-gap-2">
-      <textarea type="text" required id="open-answer" />
+    <section className="d-flex flex-column">
+      <div className="form-floating mb-2">
+        <textarea
+          className="form-control"
+          id="open-answer"
+          style="height: 150px"
+        ></textarea>
+        <label for="open-answer">Answer Below</label>
+      </div>
       <button
         type="button"
         id="open-answer-submit"

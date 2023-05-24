@@ -29,7 +29,7 @@ export default function BeginSurvey() {
     e.preventDefault();
     if (pid === null || first_name === null || last_name === null) {
       alert(
-        "Ensure all fields have been filled out and your information is accurate"
+        "Ensure all fields have been filled out and your information is accurate in order to proceed"
       );
       return;
     }
