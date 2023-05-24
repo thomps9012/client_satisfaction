@@ -34,11 +34,7 @@ export default function OpenAnswerOption({ question_id }) {
         const response = await axios.post("/api/end", {
           interview_id: interview_id,
         });
-        if (response.status === 200) {
-          document.cookie =
-            "interview_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None;";
-          navigate("/end");
-        }
+        response.status === 200 && navigate("/end");
       } else {
         navigate("/question/" + next_question);
       }

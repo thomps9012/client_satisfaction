@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 export default function EndSurvey() {
+  useEffect(() => {
+    document.cookie = "interview_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None;"
+  }, [])
   return (
     <main className="container">
       <h3>

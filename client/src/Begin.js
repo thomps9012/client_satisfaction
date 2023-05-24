@@ -25,6 +25,7 @@ export default function BeginSurvey() {
   };
   const createRecord = async (client_info) =>
     await axios.post("/api/begin", client_info).then((res) => res);
+
   const begin = async (e) => {
     e.preventDefault();
     if (pid === null || first_name === null || last_name === null) {
@@ -42,7 +43,7 @@ export default function BeginSurvey() {
       const interview_res = await createRecord(client_info);
       const expiration = new Date().getHours() + 2;
       const expiration_date = new Date(new Date().setHours(expiration));
-      document.cookie = `interview_id=${interview_res.data}; expires=${expiration_date}; Secure;`;
+      document.cookie = `interview_id=${interview_res}; expires=${expiration_date}; Secure;`;
       interview_res.status === 201 && navigate("/question/1");
     } catch (err) {
       alert(err);
