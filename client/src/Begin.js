@@ -41,9 +41,7 @@ export default function BeginSurvey() {
     };
     try {
       const interview_res = await createRecord(client_info);
-      const expiration = new Date().getHours() + 2;
-      const expiration_date = new Date(new Date().setHours(expiration));
-      document.cookie = `interview_id=${interview_res}; expires=${expiration_date}; Secure;`;
+      document.cookie = `interview_id=${interview_res};`;
       interview_res.status === 201 && navigate("/question/1");
     } catch (err) {
       alert(err);

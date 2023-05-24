@@ -18,14 +18,17 @@ function Home() {
   const navigate = useNavigate();
   const beginSurvey = (e) => {
     e.preventDefault();
-    document.cookie =
-      "interview_id=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None;";
     navigate("/begin");
   };
   return (
     <main className="container">
       <h1 className="mb-5 text-center">NORA Client Satisfaction Survey</h1>
-      <button type="link" className="btn btn-link" onClick={beginSurvey} id="begin_survey">
+      <button
+        type="link"
+        className="btn btn-link"
+        onClick={beginSurvey}
+        id="begin_survey"
+      >
         <h3>Begin Survey</h3>
       </button>
     </main>
