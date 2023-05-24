@@ -27,6 +27,8 @@ export default function OpenAnswerOption({ question_id }) {
     } catch (err) {
       alert(err) && navigate("/");
     } finally {
+      document.getElementById("open-answer").innerText = "";
+      document.getElementById("open-answer").value = "";
       const next_question = question_id + 1;
       if (next_question === 47) {
         const response = await axios.post("/api/end", {
