@@ -3,3 +3,5 @@
 .env
 /cypress
 cypress.config.js
+aggregate.js
+/client_satisfaction
