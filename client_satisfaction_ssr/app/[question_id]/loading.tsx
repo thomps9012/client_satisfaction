@@ -1,7 +1,10 @@
+import Stepper from "@/components/stepper";
+
 const Loading = async () => {
   return (
-    <main className="container mx-auto text-center m-10 p-10 flex justify-center align-middle">
-      <div role="status">
+    <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full">
+      <Stepper active_link="interview" />
+      <div className="flex justify-center mx-auto align-middle">
         <svg
           aria-hidden="true"
           className="w-96 h-96 text-gray-200 animate-spin fill-purple-700"

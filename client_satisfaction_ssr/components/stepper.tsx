@@ -19,7 +19,7 @@ const Stepper = ({ active_link }: { active_link: string }) => {
       <li
         className={
           active_link === "begin"
-            ? "flex-col items-center text-purple-600"
+            ? "flex-col items-center text-amber-300"
             : "flex items-center mt-5"
         }
       >

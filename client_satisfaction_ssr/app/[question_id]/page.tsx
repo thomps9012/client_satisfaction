@@ -16,7 +16,7 @@ const QuestionPage = async ({
   const question_data = (await getQuestion(question_id)) as QuestionInfo;
   const { _id, open_ended, question } = question_data;
   return (
-    <main className="container w-3/4 m-5 p-5 mx-auto">
+    <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full">
       <Stepper active_link="interview" />
       <h1 className="text-2xl text-center font-bold m-5 p-5 text-gray-900">
         {question}

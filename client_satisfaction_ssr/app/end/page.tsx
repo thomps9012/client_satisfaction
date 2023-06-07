@@ -7,7 +7,7 @@ const EndSurvey = async () => {
   if (ok) {
     await closeClient();
     return (
-      <main className="container w-3/4 m-5 p-5 mx-auto">
+      <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full">
         <Stepper active_link="complete" />
         <h3 className="mb-5  text-green-600 font-bold text-center text-3xl">
           Thank you for completing a Client Satisfaction Survey
@@ -24,7 +24,7 @@ const EndSurvey = async () => {
     );
   } else {
     return (
-      <main className="container m-5 p-5 mx-auto">
+      <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full">
         <Stepper active_link="complete" />
         <h3 className=" text-red-800 font-bold text-center text-3xl mb-5">
           There was an error saving your complete survey

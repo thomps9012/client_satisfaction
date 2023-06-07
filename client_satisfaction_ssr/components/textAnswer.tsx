@@ -28,7 +28,7 @@ const TextAnswer = async ({ question_id }: { question_id: number }) => {
       <textarea
         className="block p-2.5 mb-5 w-full text-md text-gray-900 bg-gray-50 rounded-lg border-gray-300 focus:ring-purple-500 focus:border-purple-500"
         placeholder="Your thoughts here..."
-        style={{ height: 150 }}
+        style={{ height: 250 }}
         required
         name="open-answer"
       ></textarea>
