@@ -1,22 +1,39 @@
 import { MongoClient } from "mongodb";
 import { randomUUID } from "crypto";
 import { ClientInfo, FilteredClientAnswer, QuestionInfo, ClientSurvey, AnswerInfo, ClientQuestionAnswer } from "./types";
+import { cache } from "react";
 
 const client = new MongoClient(process.env.MONGODB_URI as string);
+// export const preloadQuestion = (question_id: string) => {
+//   void getQuestion(question_id)
+// }
+// export const getQuestion = async (question_id: string) => {
+//   await client.connect()
+//   const question_coll = client.db(process.env.MONGODB_DB).collection<QuestionInfo>("questions");
+//   const question = await question_coll.findOne({ _id: parseInt(question_id) });
+//   return question;
+// };
 
-export const getQuestion = async (question_id: string) => {
+export const preloadAllQuestions = () => {
+  void getAllQuestions()
+}
+export const getAllQuestions = cache(async () => {
   await client.connect()
   const question_coll = client.db(process.env.MONGODB_DB).collection<QuestionInfo>("questions");
-  const question = await question_coll.findOne({ _id: parseInt(question_id) });
-  return question;
-};
+  const questions = await question_coll.find().toArray();
+  return questions
+})
 
-export const getAnswerOptions = async () => {
+
+export const preloadAnswers = () => {
+  void getAnswerOptions()
+}
+export const getAnswerOptions = cache(async () => {
   await client.connect();
   const answer_options_coll = client.db(process.env.MONGODB_DB).collection<AnswerInfo>("answers");
   const answer_options = await answer_options_coll.find().toArray();
   return answer_options;
-};
+});
 
 export const saveAnswer = async (interview_info: ClientQuestionAnswer) => {
   await client.connect();

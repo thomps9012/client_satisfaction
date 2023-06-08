@@ -9,16 +9,16 @@ const EndSurvey = async () => {
     return (
       <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full">
         <Stepper active_link="complete" />
-        <h3 className="mb-5  text-green-600 font-bold text-center text-3xl">
-          Thank you for completing a Client Satisfaction Survey
-        </h3>
         <img
           className="h-auto mb-6 rounded-lg mx-auto"
           alt="NORA Logo"
           src="/nora_logo.png"
         />
+        <h3 className="mb-5  text-green-600 font-bold text-center text-3xl">
+          Thank you for completing a Client Satisfaction Survey
+        </h3>
         <h3 className="mb-5  text-purple-800 mt-5 font-bold text-center text-xl">
-          You may close this tab / browser / application
+          Please close this tab / browser / application
         </h3>
       </main>
     );
@@ -26,8 +26,13 @@ const EndSurvey = async () => {
     return (
       <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full">
         <Stepper active_link="complete" />
+        <img
+          className="h-auto mb-6 rounded-lg mx-auto"
+          alt="NORA Logo"
+          src="/nora_logo.png"
+        />
         <h3 className=" text-red-800 font-bold text-center text-3xl mb-5">
-          There was an error saving your complete survey
+          There was an error saving your completed survey
         </h3>
         <p className=" text-gray-800 font-bold text-center text-xl">
           Please contact your assigned counselor or{" "}

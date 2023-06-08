@@ -1,9 +1,10 @@
-import { getAnswerOptions, saveAnswer } from "@/utils/db";
+import { getAnswerOptions, preloadAnswers, saveAnswer } from "@/utils/db";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { retrieveIcon } from "@/utils/retrieve_icon";
 
 const SelectAnswer = async ({ question_id }: { question_id: number }) => {
+  preloadAnswers();
   const answer_options = await getAnswerOptions();
   const submitAnswer = async (data: FormData) => {
     "use server";

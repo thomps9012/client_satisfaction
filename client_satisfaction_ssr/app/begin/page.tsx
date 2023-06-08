@@ -16,8 +16,16 @@ const BeginSurvey = async () => {
     }
     const client_info = {
       PID: parseInt(client_data.get("PID") as string),
-      first_name: client_data.get("first_name") as string,
-      last_name: client_data.get("last_name") as string,
+      first_name: client_data
+        .get("first_name")
+        ?.toString()
+        .trim()
+        .toLowerCase() as string,
+      last_name: client_data
+        .get("last_name")
+        ?.toString()
+        .trim()
+        .toLowerCase() as string,
     };
     const interview_id = await beginSurvey(client_info);
     if (interview_id) {

@@ -1,7 +1,12 @@
 import SelectAnswer from "@/components/selectAnswer";
 import Stepper from "@/components/stepper";
 import TextAnswer from "@/components/textAnswer";
-import { getQuestion } from "@/utils/db";
+import {
+  getAllQuestions,
+  // getQuestion,
+  preloadAllQuestions,
+  // preloadQuestion,
+} from "@/utils/db";
 import { QuestionInfo } from "@/utils/types";
 
 const QuestionPage = async ({
@@ -13,7 +18,13 @@ const QuestionPage = async ({
   if (parseInt(question_id) === Number.NaN) {
     throw new Error("question is not available");
   }
-  const question_data = (await getQuestion(question_id)) as QuestionInfo;
+  preloadAllQuestions();
+  const questions = await getAllQuestions();
+  const question_data = questions.find(
+    ({ _id }) => _id === parseInt(question_id)
+  ) as QuestionInfo;
+  // preloadQuestion(question_id);
+  // const question_data = (await getQuestion(question_id)) as QuestionInfo;
   const { _id, open_ended, question } = question_data;
   return (
     <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full">
