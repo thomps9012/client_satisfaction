@@ -8,7 +8,7 @@ const EndSurvey = async () => {
   if (ok) {
     await closeClient();
     return (
-      <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full h-screen">
+      <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full min-h-screen">
         <Stepper active_link="complete" />
         <Image
           className="h-auto mb-6 rounded-lg mx-auto"

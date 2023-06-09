@@ -34,7 +34,7 @@ const BeginSurvey = async () => {
     }
   };
   return (
-    <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full h-screen">
+    <main className="container sm:w-3/4 m-5 p-5 mx-auto w-full min-h-screen">
       <Stepper active_link="begin" />
       <h1 className="my-10 text-2xl font-semibold leading-none tracking-tighter text-gray-900 text-center">
         Please Enter Your Personal Information

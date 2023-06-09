@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Home() {
   return (
-    <main className="container mx-auto m-5 mt-24 p-5 items-center h-screen">
+    <main className="container mx-auto m-5 mt-24 p-5 items-center min-h-screen">
       <Image
         className="h-auto mb-6 rounded-lg mx-auto w-52"
         alt="NORA Logo"

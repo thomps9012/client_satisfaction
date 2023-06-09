@@ -19,7 +19,7 @@ const QuestionPage = async ({
   ) as QuestionInfo;
   const { _id, open_ended, question } = question_data;
   return (
-    <main className="container sm:w-4/5 m-5 p-5 mx-auto w-full h-screen">
+    <main className="container sm:w-4/5 m-5 p-5 mx-auto w-full min-h-screen">
       <Stepper active_link="interview" />
       <h1 className="text-xl md:text-2xl text-center font-bold -mt-6 mb-5 pb-5 text-gray-900">
         {question}
